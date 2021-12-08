@@ -1,0 +1,25 @@
+<div class="table-header">
+    <label for="">#</label>
+    <label for="">Nombre</label>
+    <label for="">Apellido</label>
+    <label for="">Cédula</label>
+    <label for="">Fecha</label>
+    <label for="">Género Literario</label>
+    <label for=""></label>
+</div>
+<div *ngFor= "let autor of autores; let i=index;" class="table-row">
+    <label for="">{{(i+1)}}</label>
+    <label for="{{autor.name}}">{{autor.name}}</label>
+    <label for=""> {{autor.lastname}} </label>
+    <label for=""> {{autor.id}} </label>
+    <label for=""> {{autor.birthday | date: 'MMM d, y'}} </label>
+    <label for=""> {{autor.selectedGenre}} </label>
+    <button type="button" (click)="verLibros()" > Ver libros autor</button>
+</div>
+<br><br><br>
+<h1>Libros del autor: </h1>
+<div class="table-header">
+    <label for="">Nombre</label>
+    <label for="">Año creación</label>
+    <label for="">Género</label>
+</div>
